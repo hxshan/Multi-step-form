@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:'Ubuntu';
+    background-color: hsl(206, 94%, 87%);
+}
+.background-img{
+    display: flex;
+}
+.background-img img{
+    height: 100%;
+    width: 100%;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.top-side-sec{
+  position: relative;
+}
+.steps{
+    position:absolute;
+    display: flex;
+    flex-direction: row;
+    top:20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.step-num{
+    font-family:'Ubuntu',serif;
+    border-radius: 50%;
+    color: white;
+    border: 2px solid white;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 .5rem;
+    padding-bottom:.1rem;
+    font-weight: 500;
+}
+.current{
+  color: black;
+  border: none;
+  background-color: lightblue;
+}
+.step-con{
+    width: 90%;
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem 0 2rem 0;
+    position: relative;
+    transform: translateY(-70px);
+    margin-bottom: 25vh;
+}
+.form-step{
+    height: 0;
+    width: 0;
+    opacity: 0;
+    display: none;
+}
+.active{
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 1;
+}
+.form-step h1{
+    font-family:'Ubuntu',serif;
+    color: hsl(213, 96%, 18%);
+    margin-bottom: .8rem;
+    font-size: 1.75rem;
+    padding-left: 1.5rem;
+}
+.form-step p{
+    font-family:'Ubuntu',serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: hsl(231, 11%, 63%);
+    padding-left: 1.5rem;
+    padding-right: .25rem;
+    margin-bottom: .5rem;
+  }
+.input-field{
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+    padding-right:.7rem;
+}
+#plan{
+    padding-left: 0;
+}
+.input-field label{
+    font-family:'Ubuntu',serif;
+    color: hsl(213, 96%, 18%);
+    font-weight: 400;
+    font-size: .9rem;
+}
+.input-field input[type=text]
+{
+    padding: .6rem 0 .6rem .7rem;
+    width: 95%;
+    margin-top: 5px;
+}
+.input-field input[type=text]{
+  border: 1px solid rgba(128, 128, 128, 0.649);
+  border-radius: 5px;
+}
+.input-field input[type=text]::placeholder{
+  font-family:'Ubuntu',serif;
+  font-weight: 500;
+
+}
+.hiddenerror{
+  display: none;
+}
+.inputError{
+  display: block;
+  border-color: red;
+  color: red;
+}
+.form-btn-con{
+    background-color: white;
+    position:fixed;
+    width: 100%;
+    bottom: 0;
+    height: 3.5rem;
+    display: flex;
+
+}
+.next-btn{  
+    font-family:'Ubuntu',serif;
+    padding: .7rem 0.8rem .7rem .8rem;
+    border: none;
+    border-radius:5px;
+    background-color: hsl(213, 96%, 18%);
+    color: white;
+    position: fixed;
+    right: 1rem;
+    bottom: .5rem;
+}
+.back-btn{
+  display: none;
+  font-family:'Ubuntu',serif;
+  padding: .7rem 0.8rem .7rem .8rem;
+  background-color:transparent;
+  color: grey;
+  text-decoration: underline;
+  border: none;
+  position: fixed;
+  left: 1rem;
+  bottom: .5rem;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  #step2{
+    width: 100%;
+  }
+  .input-field + .planType{
+    display: flex;
+    justify-content: center;
+    background-color:hsl(225, 18%, 96%);
+  }
+  .subType{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    width: fit-content;
+  }
+  .subType h4{
+    margin: 0 1rem;
+    font-size: 1.1rem;
+  }
+  .input-field input[type=radio]{
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .radio-con{
+    /*border: 2px solid rgba(128, 128, 128, 0.603);*/
+    display: flex;
+    justify-content:  center;
+    width:85%;
+    margin: auto;
+    margin-top: .7rem;
+    border-radius: 12px;
+    padding: 0;
+  }
+  .radio-label{
+    display: flex;
+    align-items: center;
+    border: 2px solid rgba(128, 128, 128, 0.603);
+    width:20rem;
+    padding:1rem;
+    margin: auto;
+    border-radius: 12px;
+  }
+  .radio-label img{
+    width: 55px;
+  }
+  .radio-label>.side  {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    margin-left: 1rem;
+  }
+  .radio-label>.side>p{
+    padding: 0;
+
+  }
+  .radio-label>.side>h3{
+    font-size: 1rem;
+    margin-bottom: .35rem;
+  }
+  
+  input[type="radio"]:checked + label{
+    border: 2px solid blue;
+  }
+  .checkbox{
+    padding: 0;
+    width: auto;
+    margin-top: 0;
+  }
+  .checkbox-con{
+    /*border: 2px solid rgba(128, 128, 128, 0.603);*/
+    display: flex;
+    justify-content:  center;
+    width:90%;
+    margin: auto;
+    margin-top: .7rem;
+    border-radius: 12px;
+    padding: 0;
+  }
+  .checkbox-label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid rgba(128, 128, 128, 0.603);
+    width:20rem;
+    height: 90px;
+    padding:1rem;
+    margin: auto;
+    border-radius: 12px;
+  }
+  .checkbox-label input{
+    width:20px;
+    height: 20px;
+    border-radius: 5px;
+  }
+  .checkbox-title{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width:180px;
+    margin: 0 0 0 15px;
+  }
+  .checkbox-title p{
+    padding-left: 0;
+  }
+  .checkbox-label h3 {
+    font-size: 0.95rem;
+  }
+  .checkbox-label p {
+    font-size: .85rem;
+  }
+
+  .right-side p{
+    padding-left: 0;
+  }
+  .plan-con{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .7rem;
+  }
+  .price{
+    align-self: flex-end;
+  }
+  .selected-items-con{
+   
+    width: 85%;
+    background-color: gray;
+    margin: auto auto 1rem auto;
+    border-radius: 8px;
+    padding: 1rem 0.8rem 1rem .8rem;
+  }
+  .changePlan{
+    border:none;
+    background-color: transparent;
+    text-decoration: underline;
+    font-weight: 400;
+    
+  }
+  .serv{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+  }
+  .serv-con p{
+  padding: 0;    
+  }

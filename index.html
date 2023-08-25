@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <title>Frontend Mentor | Multi-step form</title>
+</head>
+<body>
+    <main>
+        <div class="top-side-sec"> 
+            <div class="background-img">
+                <img src="assets/images/bg-sidebar-mobile.svg" alt="background">
+            </div>
+            <div class="steps">
+                <div class="step" id="step1">
+                    <div class="step-num current">1</div>
+                </div>
+
+                <div class="step" id="step2">
+                    <div class="step-num">2</div>
+                </div>
+
+                <div class="step" id="step3">
+                    <div class="step-num">3</div>
+                </div>
+
+                <div class="step" id="step4">
+                    <div class="step-num">4</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-con">
+            <form action="">
+                <div class="step-con">
+                    <div class="form-step active" id="step1">
+                        <h1>Personal info</h1>
+                        <p>Please provide your name, email address, and phone number.</p>
+                    
+                        <div class="input-field">
+                            <label for="Name">Name</label><br>
+                            <input type="text" name="Name" id="Name" placeholder="e.g. Stephen King">
+                            <span class="hiddenerror">*Name is required</span>            
+                        </div>
+                        <div class="input-field">
+                            <label for="Email">Email Address</label><br>
+                            <input type="text" name="Email"id="Email" placeholder="e.g. stephenking@lorem.com">
+                            <span class="hiddenerror">*Email is required</span>            
+                        </div>
+                        <div class="input-field">
+                            <label for="PhoneNumber">Phone Number</label><br>
+                            <input type="text" name="PhoneNumber" id="PhoneNumber"placeholder="e.g. +1 234 567 890">
+                            <span class="hiddenerror">*Phone Number is required</span>            
+                        </div>
+                    </div>
+                    <div class="form-step" id="step2">
+                        <h1>Select your plan</h1>
+                        <p>You have the option of monthly or yearly billing.</p>
+                        <br>
+                        <div class="input-field radio-con">
+                            <input type="radio" name="selectPlan" id="Arcade" value="Arcade">                        
+                            <label class="radio-label" for="Arcade">
+                                <img src="assets/images/icon-arcade.svg" alt="Arcade">
+                                <div class="side">
+                                    <h3>Arcade</h3>
+                                    <p> $9/mo</p>                
+                                    </div>
+                            </label>
+                                       
+                        </div>
+                        <div class="input-field radio-con">
+                            <input type="radio" name="selectPlan" id="Advanced" value="advanced">
+                            <label  class="radio-label" for="Advanced">
+                                <img src="assets/images/icon-advanced.svg" alt="advanced">
+                                <div class="side">
+                                    <h3>Advanced</h3>
+                                    <p> $12/mo</p>
+                                </div>
+                            </label>              
+                        </div>
+                        <div class="input-field radio-con">
+                            <input type="radio" name="selectPlan" id="Pro" value="pro">             
+                            <label class="radio-label" for="Pro">
+                                <img src="assets/images/icon-pro.svg" alt="pro">  
+                                <div class="side">
+                                    <h3>Pro</h3>
+                                    <p>$15/mo</p>
+                                </div>
+                            </label>
+                           </div>
+                        <div class="input-field planType" id="plan">
+                            <div class="subType">
+                                <h4>Monthly</h4>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                                <h4>Yearly</h4>
+                            </div>
+                           
+                        </div>
+                    </div>
+
+                    <div class="form-step" id="step3">
+                        <h1>Pick add-ons</h1>
+                        <p> Add-ons help enhance your gaming experience.</p>
+                        <br>
+                        <div class="input-field checkbox-con">
+                                                  
+                            <label class="checkbox-label" for="Arcade">
+                                <input class="checkbox" type="checkbox" name="selectAddon" id="onlineserv" value="1">  
+                                <div class="checkbox-title">
+                                    <h3>Online service</h3>
+                                    <p>Access to multiplayer games</p>                
+                                </div>
+                                <div class="right-side">
+                                    <p>+$1/mo</p>
+                                </div>
+                            </label>
+                                       
+                        </div>
+                        <div class="input-field checkbox-con">
+                            
+                            <label  class="checkbox-label" for="Advanced">
+                                <input class="checkbox" type="checkbox" name="selectAddon" id="largerstor" value="2">
+                                <div class="checkbox-title">
+                                    <h3>Larger storage</h3>
+                                    <p>Extra 1TB of cloud save</p>
+                                </div>
+                                <div class="right-side">
+                                    <p>+$2/mo</p>
+                                </div>
+                            </label>              
+                        </div>
+                        <div class="input-field checkbox-con">   
+                            <label class="checkbox-label" for="Pro">
+                                <input class="checkbox" type="checkbox" name="selectAddon" id="customprof" value="2">       
+                                <div class="checkbox-title">
+                                    <h3>Customizable Profile</h3>
+                                    <p>Custom theme on your profile</p>
+                                </div>
+                                <div class="right-side">
+                                    <p>+$2/mo</p>
+                                </div>
+                            </label>
+                           </div>                 
+                    </div>
+
+                    <div class="form-step" id="step4">
+                        <h1>Finishing up</h1>
+                        <p>Double-check everything looks OK before confirming.</p>
+                        <br>
+                       <div class="selected-items-con">
+                            <div class="plan-con">
+                                <div class="plan">
+                                    <h5>ARCADE (Monthly)</h4>
+                                    <button class="changePlan">change</button>
+                                </div>                        
+                                <span class="price">$90/yr</span>
+                            </div>
+                            <hr>
+                            <div class="serv-con">
+                                <div class="serv">
+                                    <p id="serv-name">Online Service</p>
+                                    <p id="serv-price">+$10/yr</p>
+                                </div>
+                                <div class="serv">
+                                    <p id="serv-name">Online Service</p>
+                                    <p id="serv-price">+$10/yr</p>
+                                </div>
+                                <div class="serv">
+                                    <p id="serv-name">Online Service</p>
+                                    <p id="serv-price">+$10/yr</p>
+                                </div>
+                                
+                            </div>
+                       </div>
+                       <div class="tot">
+                            <p>Total (per month/year)</p>
+                            <p id="total"></p>
+                       </div>
+                    </div>
+                </div>
+                <div class="form-btn-con">
+                    <button type="button" class="back-btn" id="back-btn" data-num="1">Go Back</button>
+                    <button type="button" class="next-btn" id="next-btn" data-num="1">Next Step</button>
+                </div>
+            </form>
+        </div>
+
+    </main>
+    <script src="scripts/script.js"></script>
+    <script type="module" src="scripts/dataValidation.js"></script>
+</body>
+</html>
