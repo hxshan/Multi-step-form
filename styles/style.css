@@ -50,6 +50,16 @@ form{
   border: none;
   background-color: lightblue;
 }
+hr{
+  border-top: 1px hsl(231, 11%, 63%);
+}
+/*plans selections */
+.Yearlydisc{
+  display: none;
+}
+.selected{
+  display: block;
+}
 .step-con{
     width: 90%;
     background-color: white;
@@ -260,7 +270,7 @@ form{
     border-radius: 12px;
   }
   .radio-label img{
-    width: 55px;
+    width:3.3rem;
   }
   .radio-label>.side  {
     display: flex;
@@ -336,13 +346,24 @@ form{
     justify-content: space-between;
     margin-bottom: .7rem;
   }
+  .plan h5{
+    font-weight: 700;
+    color:hsl(213, 96%, 18%);
+  }
+  .plan button{
+    font-size: 1rem;
+    color: hsl(231, 11%, 63%) ;
+  }
   .price{
     align-self: flex-end;
+    color: hsl(213, 96%, 18%);
+    font-weight:700 ;
+
   }
   .selected-items-con{
    
     width: 85%;
-    background-color: gray;
+    background-color: hsl(217, 100%, 97%);
     margin: auto auto 1rem auto;
     border-radius: 8px;
     padding: 1rem 0.8rem 1rem .8rem;
@@ -361,4 +382,15 @@ form{
   }
   .serv-con p{
   padding: 0;    
+  }
+  .tot{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 1.5rem;
+  }
+  #total{
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: hsl(243, 100%, 62%);
   }

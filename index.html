@@ -61,33 +61,36 @@
                         <p>You have the option of monthly or yearly billing.</p>
                         <br>
                         <div class="input-field radio-con">
-                            <input type="radio" name="selectPlan" id="Arcade" value="Arcade">                        
+                            <input type="radio" name="selectPlan" id="Arcade" data-price="9" value="Arcade(Monthly)">                        
                             <label class="radio-label" for="Arcade">
                                 <img src="assets/images/icon-arcade.svg" alt="Arcade">
                                 <div class="side">
                                     <h3>Arcade</h3>
-                                    <p> $9/mo</p>                
+                                    <p class="planPrice" id="arcadePrice">$9/mo</p> 
+                                    <span class="Yearlydisc">2 months free</span>               
                                     </div>
                             </label>
                                        
                         </div>
                         <div class="input-field radio-con">
-                            <input type="radio" name="selectPlan" id="Advanced" value="advanced">
+                            <input type="radio" name="selectPlan" id="Advanced" data-price="12" value="Advanced(Monthly)">
                             <label  class="radio-label" for="Advanced">
                                 <img src="assets/images/icon-advanced.svg" alt="advanced">
                                 <div class="side">
                                     <h3>Advanced</h3>
-                                    <p> $12/mo</p>
+                                    <p class="planPrice" id="advancePrice">$12/mo</p>
+                                    <span class="Yearlydisc">2 months free</span>
                                 </div>
                             </label>              
                         </div>
                         <div class="input-field radio-con">
-                            <input type="radio" name="selectPlan" id="Pro" value="pro">             
+                            <input type="radio" name="selectPlan" id="Pro" data-price="15" value="Pro(Monthly)">             
                             <label class="radio-label" for="Pro">
                                 <img src="assets/images/icon-pro.svg" alt="pro">  
                                 <div class="side">
                                     <h3>Pro</h3>
-                                    <p>$15/mo</p>
+                                    <p class="planPrice" id="proPrice">$15/mo</p>
+                                    <span class="Yearlydisc">2 months free</span>
                                 </div>
                             </label>
                            </div>
@@ -95,7 +98,7 @@
                             <div class="subType">
                                 <h4>Monthly</h4>
                                 <label class="switch">
-                                    <input type="checkbox">
+                                    <input type="checkbox" id="plantype" value="0">
                                     <span class="slider round"></span>
                                 </label>
                                 <h4>Yearly</h4>
@@ -110,40 +113,40 @@
                         <br>
                         <div class="input-field checkbox-con">
                                                   
-                            <label class="checkbox-label" for="Arcade">
-                                <input class="checkbox" type="checkbox" name="selectAddon" id="onlineserv" value="1">  
+                            <label class="checkbox-label" for="onlineserv">
+                                <input class="checkbox" type="checkbox" name="selectAddon" id="onlineserv" data-name="Online Service" value="1">  
                                 <div class="checkbox-title">
                                     <h3>Online service</h3>
                                     <p>Access to multiplayer games</p>                
                                 </div>
                                 <div class="right-side">
-                                    <p>+$1/mo</p>
+                                    <p name="addonPrice">+$1/mo</p>
                                 </div>
                             </label>
                                        
                         </div>
                         <div class="input-field checkbox-con">
                             
-                            <label  class="checkbox-label" for="Advanced">
-                                <input class="checkbox" type="checkbox" name="selectAddon" id="largerstor" value="2">
+                            <label  class="checkbox-label" for="largerstor">
+                                <input class="checkbox" type="checkbox" name="selectAddon" id="largerstor" data-name="Larger storage" value="2">
                                 <div class="checkbox-title">
                                     <h3>Larger storage</h3>
                                     <p>Extra 1TB of cloud save</p>
                                 </div>
                                 <div class="right-side">
-                                    <p>+$2/mo</p>
+                                    <p name="addonPrice">+$2/mo</p>
                                 </div>
                             </label>              
                         </div>
                         <div class="input-field checkbox-con">   
-                            <label class="checkbox-label" for="Pro">
-                                <input class="checkbox" type="checkbox" name="selectAddon" id="customprof" value="2">       
+                            <label class="checkbox-label" for="customprof">
+                                <input class="checkbox" type="checkbox" name="selectAddon" id="customprof" data-name="Customizable Profile" value="2">       
                                 <div class="checkbox-title">
                                     <h3>Customizable Profile</h3>
                                     <p>Custom theme on your profile</p>
                                 </div>
                                 <div class="right-side">
-                                    <p>+$2/mo</p>
+                                    <p name="addonPrice">+$2/mo</p>
                                 </div>
                             </label>
                            </div>                 
@@ -156,34 +159,37 @@
                        <div class="selected-items-con">
                             <div class="plan-con">
                                 <div class="plan">
-                                    <h5>ARCADE (Monthly)</h4>
-                                    <button class="changePlan">change</button>
+                                    <h5 id="selected-plan-name">ARCADE (Monthly)</h4>
+                                    <button class="changePlan" id="changePlan">Change</button>
                                 </div>                        
                                 <span class="price">$90/yr</span>
                             </div>
                             <hr>
-                            <div class="serv-con">
-                                <div class="serv">
+                            <div class="serv-con" id="serv-con">
+                               <!-- <div class="serv">
                                     <p id="serv-name">Online Service</p>
                                     <p id="serv-price">+$10/yr</p>
-                                </div>
-                                <div class="serv">
-                                    <p id="serv-name">Online Service</p>
-                                    <p id="serv-price">+$10/yr</p>
-                                </div>
-                                <div class="serv">
-                                    <p id="serv-name">Online Service</p>
-                                    <p id="serv-price">+$10/yr</p>
-                                </div>
+                                </div>-->
+                                
                                 
                             </div>
                        </div>
                        <div class="tot">
-                            <p>Total (per month/year)</p>
+                            <p>Total per <span id="tot-plan"></span></p>
                             <p id="total"></p>
                        </div>
                     </div>
+                    <div class="form-step" id="step5">
+                        <h1>Thank you!</h1>
+                        <p>Thanks for confirming your subscription! We hope you have fun 
+                            using our platform. If you ever need support, please feel free 
+                            to email us at support@loremgaming.com.</p>
+                        <br>
+                    </div>
                 </div>
+                
+
+            </div>
                 <div class="form-btn-con">
                     <button type="button" class="back-btn" id="back-btn" data-num="1">Go Back</button>
                     <button type="button" class="next-btn" id="next-btn" data-num="1">Next Step</button>
