@@ -60,6 +60,9 @@ hr{
 .selected{
   display: block;
 }
+.inactive{
+  display: none;
+}
 .step-con{
     width: 90%;
     background-color: white;
@@ -393,4 +396,96 @@ hr{
     font-size: 1.1rem;
     font-weight: 700;
     color: hsl(243, 100%, 62%);
+  }
+  #step5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #step5 h1{
+    margin: 1rem 0;
+  }
+  #step5 p{
+   padding: 0rem 1rem;
+   line-height: 1.5rem;
+  }
+
+  @media screen and (min-width:768px){
+    form{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .top-side-sec{
+    position: relative;
+    z-index:2;
+    max-width: 35vw;
+  }
+  .steps {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    transform: translateX(0);
+    margin-left: 2rem;
+  }
+  .step-num{
+      font-family:'Ubuntu',serif;
+      border-radius: 50%;
+      color: white;
+      border: 2px solid white;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+      margin: 2rem 0;
+      padding-bottom:.1rem;
+      font-weight: 500;
+  }
+  .background-img{
+    content:url('../assets/images/bg-sidebar-desktop.svg');
+    display: flex;
+    height: 100%;
+    padding: 1rem;
+
+}
+.background-img img{
+    height: 100%;
+    width: 100%;
+}
+.step-con{
+  width: 100%;
+  background-color: white;
+  border-radius: 8px 8px 0px 0px;
+  padding: 2rem 0 2rem 0;
+  position: relative;
+  transform: translateY(0);
+  margin-bottom:0;
+}
+.form-con{
+  margin-top: 5rem;
+  display: flex;
+  background-color: white;
+  border-radius: 8px;
+  max-width: 70vw;
+  min-width: 70vw;
+  height: 38rem;
+}
+.form-btn-con {
+  background-color: white;
+  position: relative;
+  width: 60%;
+  bottom: 0;
+  height: 3.5rem;
+  display: flex;
+}
+main{
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
   }

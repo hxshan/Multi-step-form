@@ -10,30 +10,35 @@
 </head>
 <body>
     <main>
-        <div class="top-side-sec"> 
-            <div class="background-img">
-                <img src="assets/images/bg-sidebar-mobile.svg" alt="background">
-            </div>
-            <div class="steps">
-                <div class="step" id="step1">
-                    <div class="step-num current">1</div>
-                </div>
-
-                <div class="step" id="step2">
-                    <div class="step-num">2</div>
-                </div>
-
-                <div class="step" id="step3">
-                    <div class="step-num">3</div>
-                </div>
-
-                <div class="step" id="step4">
-                    <div class="step-num">4</div>
-                </div>
-            </div>
-        </div>
+       
         
         <div class="form-con">
+                <!--
+                    Top and side image
+                -->
+                <div class="top-side-sec"> 
+                    <div class="background-img">
+                        <img src="assets/images/bg-sidebar-mobile.svg" alt="background">
+                    </div>
+                    <div class="steps">
+                        <div class="step" id="step1">
+                            <div class="step-num current">1</div>
+                        </div>
+        
+                        <div class="step" id="step2">
+                            <div class="step-num">2</div>
+                        </div>
+        
+                        <div class="step" id="step3">
+                            <div class="step-num">3</div>
+                        </div>
+        
+                        <div class="step" id="step4">
+                            <div class="step-num">4</div>
+                        </div>
+                    </div>
+                </div>
+
             <form action="">
                 <div class="step-con">
                     <div class="form-step active" id="step1">
@@ -180,19 +185,18 @@
                        </div>
                     </div>
                     <div class="form-step" id="step5">
+                        <img src="assets/images/icon-thank-you.svg" alt="Thanks">
                         <h1>Thank you!</h1>
-                        <p>Thanks for confirming your subscription! We hope you have fun 
+                        <p>Thanks for confirming your subscription!<br>We hope you have fun 
                             using our platform. If you ever need support, please feel free 
                             to email us at support@loremgaming.com.</p>
                         <br>
                     </div>
-                </div>
-                
-
-            </div>
+                </div>   
                 <div class="form-btn-con">
                     <button type="button" class="back-btn" id="back-btn" data-num="1">Go Back</button>
                     <button type="button" class="next-btn" id="next-btn" data-num="1">Next Step</button>
+                    <button type="button" class="next-btn inactive" id="submit-btn">Confirm</button>
                 </div>
             </form>
         </div>

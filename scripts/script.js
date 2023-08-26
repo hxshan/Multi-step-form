@@ -6,6 +6,7 @@ const stepNumsArr = document.querySelectorAll(".step-num");
 const plansArr=document.querySelectorAll(".radio-con");
 //buttons
 const nextBtn = document.getElementById("next-btn");
+const confirmBtn = document.getElementById("submit-btn");
 const backBtn =document.getElementById("back-btn");
 
 let tabNum =  parseInt(nextBtn.getAttribute("data-num"));//round numbers indicating current tab
@@ -112,67 +113,17 @@ function addonSelected(curr){
         return true
     }
 }
-
 function tabChange(tabNum){
-    switch (tabNum) {
-        case 1:
-            //actual tab
-            stepsArr[0].classList.add("active");
-            stepsArr[1].classList.remove("active");
-            stepsArr[2].classList.remove("active");
-            stepsArr[3].classList.remove("active");
-            stepsArr[4].classList.remove("active")
-            //tab numbers css
-            stepNumsArr[0].classList.add("current");
-            stepNumsArr[1].classList.remove("current");
-            stepNumsArr[2].classList.remove("current");
-            stepNumsArr[3].classList.remove("current");
-            break;
-        case 2:
-            //actual tab
-            stepsArr[0].classList.remove("active");
-            stepsArr[1].classList.add("active");
-            stepsArr[2].classList.remove("active");
-            stepsArr[3].classList.remove("active");
-            stepsArr[4].classList.remove("active")
-            //tab numbers css
-            stepNumsArr[0].classList.remove("current");
-            stepNumsArr[1].classList.add("current");
-            stepNumsArr[2].classList.remove("current");
-            stepNumsArr[3].classList.remove("current");
-            break;
-        case 3:
-            stepsArr[0].classList.remove("active");
-            stepsArr[1].classList.remove("active");
-            stepsArr[2].classList.add("active");
-            stepsArr[3].classList.remove("active");
-            stepsArr[4].classList.remove("active")
-            //tab numbers css
-            stepNumsArr[0].classList.remove("current");
-            stepNumsArr[1].classList.remove("current");
-            stepNumsArr[2].classList.add("current");
-            stepNumsArr[3].classList.remove("current");
-            break;
-        case 4:
-            stepsArr[0].classList.remove("active");
-            stepsArr[1].classList.remove("active");
-            stepsArr[2].classList.remove("active");
-            stepsArr[3].classList.add("active");
-            stepsArr[4].classList.remove("active")
-            //tab numbers css
-            stepNumsArr[0].classList.remove("current");
-            stepNumsArr[1].classList.remove("current");
-            stepNumsArr[2].classList.remove("current");
-            stepNumsArr[3].classList.add("current");
-            
-               break;
-        case 5:
-            stepsArr[0].classList.remove("active");
-            stepsArr[1].classList.remove("active");
-            stepsArr[2].classList.remove("active");
-            stepsArr[3].classList.remove("active");
-            stepsArr[4].classList.add("active")
+    stepsArr.forEach(element=>{
+        element.classList.remove("active")
+    })
+    stepsArr[tabNum-1].classList.add("active")
 
+    if(tabNum!=5){
+        stepNumsArr.forEach(element=>{
+            element.classList.remove("current")
+        })
+        stepNumsArr[tabNum-1].classList.add("current")
     }
 }
 function ChangePlanValues(plan){
@@ -234,10 +185,10 @@ function ChangePlanValues(plan){
     }
 }
 
-//planTypebtn.value=false;
+
 
 planTypebtn.addEventListener('click',()=>{
-    //toggle plan
+
     if(planTypebtn.value==0){
         planTypebtn.value=1
     }else{
@@ -290,6 +241,7 @@ nextBtn.addEventListener('click',()=>{
        
     }
     if(tabNum===4){
+        totalPrice=0;
         selectedPlanText.innerText=selectedPlan.value
         selectedPlanPrice.innerText="$"+selectedPlan.dataset.price+(planTypebtn.value==0 ? "/mo" : "/yr")
         totplan.innerHTML=(planTypebtn.value==0 ? "month" : "year")
@@ -300,6 +252,8 @@ nextBtn.addEventListener('click',()=>{
             serviceCon.appendChild(servCon)
         });
         totalPriceText.innerText="$"+totalPrice+(planTypebtn.value==0 ? "/mo" : "/yr")
+        nextBtn.classList.add("inactive")
+        confirmBtn.classList.remove("inactive")
     }
     if(tabNum != 1 &&tabNum !=5){
         backBtn.style.display = 'block';
@@ -325,3 +279,10 @@ changePlanBtn.addEventListener('click',e=>{
     }
     tabChange(tabNum)
 })
+confirmBtn.addEventListener('click',()=>{
+    tabNum=5;
+    tabChange(tabNum)
+    backBtn.style.display='none'
+    confirmBtn.style.display='none'
+})
+
