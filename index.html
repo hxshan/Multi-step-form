@@ -65,48 +65,52 @@
                         <h1>Select your plan</h1>
                         <p>You have the option of monthly or yearly billing.</p>
                         <br>
-                        <div class="input-field radio-con">
-                            <input type="radio" name="selectPlan" id="Arcade" data-price="9" value="Arcade(Monthly)">                        
-                            <label class="radio-label" for="Arcade">
-                                <img src="assets/images/icon-arcade.svg" alt="Arcade">
-                                <div class="side">
-                                    <h3>Arcade</h3>
-                                    <p class="planPrice" id="arcadePrice">$9/mo</p> 
-                                    <span class="Yearlydisc">2 months free</span>               
+                        <div class="plan-in-con">
+                            <div class="input-field radio-con">
+                                <input type="radio" name="selectPlan" id="Arcade" data-price="9" value="Arcade(Monthly)">                        
+                                <label class="radio-label" id="arcade-label" for="Arcade">
+                                    <img src="assets/images/icon-arcade.svg" alt="Arcade">
+                                    <div class="side">
+                                        <h3>Arcade</h3>
+                                        <p class="planPrice" id="arcadePrice">$9/mo</p> 
+                                        <span class="Yearlydisc">2 months free</span>               
+                                        </div>
+                                </label>
+                                           
+                            </div>
+                            <div class="input-field radio-con">
+                                <input type="radio" name="selectPlan" id="Advanced" data-price="12" value="Advanced(Monthly)">
+                                <label  class="radio-label" for="Advanced">
+                                    <img src="assets/images/icon-advanced.svg" alt="advanced">
+                                    <div class="side">
+                                        <h3>Advanced</h3>
+                                        <p class="planPrice" id="advancePrice">$12/mo</p>
+                                        <span class="Yearlydisc">2 months free</span>
                                     </div>
-                            </label>
-                                       
+                                </label>              
+                            </div>
+                            <div class="input-field radio-con">
+                                <input type="radio" name="selectPlan" id="Pro" data-price="15" value="Pro(Monthly)">             
+                                <label class="radio-label" for="Pro">
+                                    <img src="assets/images/icon-pro.svg" alt="pro">  
+                                    <div class="side">
+                                        <h3>Pro</h3>
+                                        <p class="planPrice" id="proPrice">$15/mo</p>
+                                        <span class="Yearlydisc">2 months free</span>
+                                    </div>
+                                </label>
+                            </div>
                         </div>
-                        <div class="input-field radio-con">
-                            <input type="radio" name="selectPlan" id="Advanced" data-price="12" value="Advanced(Monthly)">
-                            <label  class="radio-label" for="Advanced">
-                                <img src="assets/images/icon-advanced.svg" alt="advanced">
-                                <div class="side">
-                                    <h3>Advanced</h3>
-                                    <p class="planPrice" id="advancePrice">$12/mo</p>
-                                    <span class="Yearlydisc">2 months free</span>
-                                </div>
-                            </label>              
-                        </div>
-                        <div class="input-field radio-con">
-                            <input type="radio" name="selectPlan" id="Pro" data-price="15" value="Pro(Monthly)">             
-                            <label class="radio-label" for="Pro">
-                                <img src="assets/images/icon-pro.svg" alt="pro">  
-                                <div class="side">
-                                    <h3>Pro</h3>
-                                    <p class="planPrice" id="proPrice">$15/mo</p>
-                                    <span class="Yearlydisc">2 months free</span>
-                                </div>
-                            </label>
-                           </div>
+                       
+                        
                         <div class="input-field planType" id="plan">
                             <div class="subType">
-                                <h4>Monthly</h4>
+                                <h4 id="month-lab">Monthly</h4>
                                 <label class="switch">
                                     <input type="checkbox" id="plantype" value="0">
                                     <span class="slider round"></span>
                                 </label>
-                                <h4>Yearly</h4>
+                                <h4 id="year-lab">Yearly</h4>
                             </div>
                            
                         </div>

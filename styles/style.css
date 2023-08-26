@@ -111,7 +111,7 @@ hr{
 .input-field label{
     font-family:'Ubuntu',serif;
     color: hsl(213, 96%, 18%);
-    font-weight: 400;
+    font-weight: 500;
     font-size: .9rem;
 }
 .input-field input[type=text]
@@ -119,15 +119,19 @@ hr{
     padding: .6rem 0 .6rem .7rem;
     width: 95%;
     margin-top: 5px;
-}
-.input-field input[type=text]{
-  border: 1px solid rgba(128, 128, 128, 0.649);
-  border-radius: 5px;
+    font-weight: 700;
+    color: hsl(213, 96%, 18%);
+    border: 1px solid rgba(153, 153, 153, 0.649);
+    border-radius: 7px;
+    
 }
 .input-field input[type=text]::placeholder{
   font-family:'Ubuntu',serif;
   font-weight: 500;
 
+}
+.input-field input[type=text]:focus{
+  border-color: hsl(243, 100%, 62%);
 }
 .hiddenerror{
   display: none;
@@ -156,6 +160,11 @@ hr{
     position: fixed;
     right: 1rem;
     bottom: .5rem;
+    letter-spacing:2px;
+}
+.next-btn:hover{
+  cursor: pointer;
+  background-color: hsl(213, 100%, 30%);
 }
 .back-btn{
   display: none;
@@ -163,7 +172,7 @@ hr{
   padding: .7rem 0.8rem .7rem .8rem;
   background-color:transparent;
   color: grey;
-  text-decoration: underline;
+  text-decoration: none;
   border: none;
   position: fixed;
   left: 1rem;
@@ -188,7 +197,7 @@ hr{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: hsl(213, 96%, 18%);
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -206,7 +215,7 @@ hr{
   }
   
   input:checked + .slider {
-    background-color: #2196F3;
+    background-color:hsl(213, 96%, 18%);
   }
   
   input:focus + .slider {
@@ -230,20 +239,26 @@ hr{
   #step2{
     width: 100%;
   }
-  .input-field + .planType{
+.planType{
     display: flex;
     justify-content: center;
-    background-color:hsl(225, 18%, 96%);
+    background-color:hsl(217, 100%, 97%);
+    padding-right: 0;
+    width: 85%;
+    margin-left: 7.5%;
+    font-weight: 500;
+    border-radius: 8px;
   }
   .subType{
     display: flex;
     align-items: center;
     padding: 1rem;
-    width: fit-content;
   }
   .subType h4{
     margin: 0 1rem;
     font-size: 1.1rem;
+    font-weight: 500;
+    color: hsl(231, 11%, 63%);
   }
   .input-field input[type=radio]{
     position: absolute;
@@ -291,13 +306,15 @@ hr{
   }
   
   input[type="radio"]:checked + label{
-    border: 2px solid blue;
+    border: 2px solid hsl(243, 100%, 62%);
   }
   .checkbox{
     padding: 0;
     width: auto;
     margin-top: 0;
+    accent-color: hsl(243, 100%, 62%);
   }
+
   .checkbox-con{
     /*border: 2px solid rgba(128, 128, 128, 0.603);*/
     display: flex;
@@ -412,11 +429,12 @@ hr{
   }
 
   @media screen and (min-width:768px){
-    form{
+    form {
       display: flex;
       flex-direction: column;
       align-items: center;
-  }
+      justify-content: space-between;
+    }
   .top-side-sec{
     position: relative;
     z-index:2;
@@ -435,11 +453,6 @@ hr{
       border-radius: 50%;
       color: white;
       border: 2px solid white;
-      width: 35px;
-      height: 35px;
-      display: flex;
-      align-items: center;
-      justify-content: center; 
       margin: 2rem 0;
       padding-bottom:.1rem;
       font-weight: 500;
@@ -448,38 +461,102 @@ hr{
     content:url('../assets/images/bg-sidebar-desktop.svg');
     display: flex;
     height: 100%;
-    padding: 1rem;
+    padding: 1rem 0 1rem 1rem;
 
 }
 .background-img img{
     height: 100%;
     width: 100%;
 }
-.step-con{
+.step-con {
   width: 100%;
-  background-color: white;
-  border-radius: 8px 8px 0px 0px;
   padding: 2rem 0 2rem 0;
   position: relative;
   transform: translateY(0);
-  margin-bottom:0;
+  margin-bottom: 0;
+  margin-left: 0;
+  height: 80%;
 }
 .form-con{
   margin-top: 5rem;
   display: flex;
   background-color: white;
   border-radius: 8px;
-  max-width: 70vw;
-  min-width: 70vw;
   height: 38rem;
 }
 .form-btn-con {
   background-color: white;
   position: relative;
-  width: 60%;
+  margin-bottom: 1.8rem;
+  width: 100%;
   bottom: 0;
   height: 3.5rem;
+  display:flex;
+  justify-content: end;
+  
+}
+.next-btn {
+  font-family: 'Ubuntu',serif;
+  font-weight: 700;
+  padding: .7rem 1.5rem .7rem 1.5rem;
+  position: relative;
+  right: 0;
+  bottom: 0;
+}
+.back-btn {
+ 
+  font-family: 'Ubuntu',serif;
+  position: relative;
+  margin-right: 55%;
+}
+.input-field {
+  margin-top: 1.6rem;
+  padding-left: 0rem;
+  padding-right: 0;
+}
+.input-field input[type="text"] {
+  border: 1px solid rgba(128, 128, 128, 0.649);
+  border-radius: 5px;
+  padding: 1rem 0 1rem .7rem;
+  width: 100%;
+  margin-top: 10px;
+
+}
+.input-field label {
+  font-size: 1rem;
+}
+.plan-in-con{
   display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.radio-label{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  align-items: start;
+  text-align: start;
+  margin:0;
+}
+
+.radio-label img {
+  width: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+.form-step h1{
+  padding-left: 0rem;
+  font-size: 2rem;
+}
+.form-step{
+  width: 490px;
+}
+.form-step p{
+  padding-left: 0rem;
+}
+.planType{
+  width: 100%;
+  margin-left: 0;
 }
 main{
   display: flex;
@@ -487,5 +564,11 @@ main{
   width: 100vw;
   align-items: center;
   justify-content: center;
+}
+#month-lab{
+  color:hsl(213, 96%, 18%) ;
+}
+form{
+  margin:0 5rem 0 5rem;
 }
   }

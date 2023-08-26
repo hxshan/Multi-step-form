@@ -10,6 +10,8 @@ const confirmBtn = document.getElementById("submit-btn");
 const backBtn =document.getElementById("back-btn");
 
 let tabNum =  parseInt(nextBtn.getAttribute("data-num"));//round numbers indicating current tab
+let monthLabel=document.querySelector("#month-lab")
+let yearLabel=document.querySelector("#year-lab")
 
 //first tab inputs
 const Name=document.getElementById("Name")
@@ -49,14 +51,17 @@ function stepOneValidate()
     if(Name.value===""){
         Errlist[0].classList.add("inputError");
         Errlist[0].innerText="*Name is required";
+        Name.style.borderColor="red"
         status=true;
     }else if(nameregex.test(Name.value)==false){
         Errlist[0].classList.add("inputError");
         Errlist[0].innerText="*Name can contain only letters";
+        Name.style.borderColor="red"
         status=true;
     }
     else{
         Errlist[0].classList.remove("inputError");
+        Name.style.borderColor="black"
     }
 
 
@@ -64,26 +69,32 @@ function stepOneValidate()
     if (email.value===""){
         Errlist[1].classList.add("inputError");
         Errlist[1].innerText="*Email is required";    
+        email.style.borderColor="red"
         status=true;
     }else if(emailregex.test(email.value)==false){
             Errlist[1].classList.add("inputError");
             Errlist[1].innerText="*Invalid Email";
+            email.style.borderColor="red"
             status=true;
     }else{
         Errlist[1].classList.remove("inputError");
+        email.style.borderColor="black"
     }
 
     //Phone Number feild validation
     if (phoneNumber.value===""){
         Errlist[2].classList.add("inputError");
+        phoneNumber.style.borderColor="red"
         status=true;
     }else if(phoneregex.test(phoneNumber.value)==false){
         Errlist[2].classList.add("inputError");
         Errlist[2].innerText="*Invalid Phone Number";
+        phoneNumber.style.borderColor="red"
         status=true;
     }
     else{
         Errlist[2].classList.remove("inputError");
+        phoneNumber.style.borderColor="black"
     }
 
     return status
@@ -128,6 +139,9 @@ function tabChange(tabNum){
 }
 function ChangePlanValues(plan){
     if(plan==1){
+        yearLabel.style.color="hsl(213, 96%, 18%)"
+        monthLabel.style.color="hsl(231, 11%, 63%)"
+
         //Arcade Plan
         planPriceArr[0].innerText="$90/yr"
         plans[0].dataset.price=90
@@ -156,6 +170,10 @@ function ChangePlanValues(plan){
         AddonPrices[2].innerText="+20/yr"
         Addons[2].value=20
     }else if(plan==0){
+        monthLabel.style.color="hsl(213, 96%, 18%)"
+        yearLabel.style.color="hsl(231, 11%, 63%)"
+
+
          //Arcade Plan
          planPriceArr[0].innerText="$9/mo"
          plans[0].dataset.price=9
@@ -181,7 +199,7 @@ function ChangePlanValues(plan){
  
          //customizable Profile
          AddonPrices[2].innerText="+2/mo"
-         Addons[2].dataset.value=2
+         Addons[2].value=2
     }
 }
 
@@ -246,6 +264,7 @@ nextBtn.addEventListener('click',()=>{
         selectedPlanPrice.innerText="$"+selectedPlan.dataset.price+(planTypebtn.value==0 ? "/mo" : "/yr")
         totplan.innerHTML=(planTypebtn.value==0 ? "month" : "year")
         totalPrice+= parseInt(selectedPlan.dataset.price) 
+        selectedAddon=document.querySelectorAll('input[name="selectAddon"]:checked');
         selectedAddon.forEach(element => {
             totalPrice+= parseInt(element.value)
             let servCon=createserviceDiv(element.dataset.name,element.value,planTypebtn.value)
@@ -269,6 +288,10 @@ backBtn.addEventListener('click',()=>{
     if(tabNum == 1){
         backBtn.style.display = 'none';
     }
+    if(!confirmBtn.classList.contains("inactive")){
+        confirmBtn.classList.add("inactive")
+        nextBtn.classList.remove("inactive")
+    }
 })
 
 changePlanBtn.addEventListener('click',e=>{
@@ -276,6 +299,10 @@ changePlanBtn.addEventListener('click',e=>{
     tabNum=2
     while (serviceCon.firstChild) {
         serviceCon.removeChild(serviceCon.firstChild);
+    }
+    if(!confirmBtn.classList.contains("inactive")){
+        confirmBtn.classList.add("inactive")
+        nextBtn.classList.remove("inactive")
     }
     tabChange(tabNum)
 })
