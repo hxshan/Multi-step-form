@@ -134,7 +134,7 @@ hr {
   font-family: "Ubuntu", serif;
   font-weight: 500;
 }
-.input-field input[type="text"]:focus {
+input[type="text"]:focus {
   border-color: hsl(243, 100%, 62%);
 }
 .hiddenerror {
@@ -298,6 +298,10 @@ input:checked + .slider:before {
   margin: auto;
   border-radius: 12px;
 }
+.radio-label:hover{
+  cursor: pointer;
+  border-color: hsl(243, 100%, 62%);
+}
 .radio-label img {
   width: 3.3rem;
 }
@@ -317,6 +321,7 @@ input:checked + .slider:before {
 
 input[type="radio"]:checked + label {
   border: 2px solid hsl(243, 100%, 62%);
+  background-color: hsl(217, 100%, 97%);
 }
 .checkbox {
   padding: 0;
@@ -346,6 +351,10 @@ input[type="radio"]:checked + label {
   margin: auto;
   border-radius: 12px;
 }
+.checkbox-label:hover{
+  cursor: pointer;
+  border-color: hsl(243, 100%, 62%);
+}
 .checkbox-label input {
   width: 20px;
   height: 20px;
@@ -369,6 +378,7 @@ input[type="radio"]:checked + label {
 }
 .checkbox-label:has(.checkbox:checked) {
   border-color: hsl(243, 100%, 62%);
+  background-color: hsl(217, 100%, 97%);
 }
 .right-side p {
   padding-left: 0;
@@ -405,6 +415,9 @@ input[type="radio"]:checked + label {
   background-color: transparent;
   text-decoration: underline;
   font-weight: 400;
+}
+.changePlan:hover{
+  cursor: pointer;
 }
 .serv {
   display: flex;
@@ -554,6 +567,9 @@ input[type="radio"]:checked + label {
     width: 100%;
     margin-top: 10px;
   }
+  input[type="text"]:focus {
+    border:1px solid hsl(243, 100%, 62%) !important;
+  }
   .input-field label {
     font-size: 1rem;
   }
@@ -572,7 +588,7 @@ input[type="radio"]:checked + label {
     margin: 0;
     padding: 1rem 0 1rem 1rem;
   }
-
+  
   .radio-label > .side {
   
     margin-left: 0rem;

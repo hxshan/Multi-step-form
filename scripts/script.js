@@ -37,6 +37,7 @@ var totplan=document.getElementById("tot-plan")
 var totalPriceText=document.getElementById("total");
 var totalPrice=0;
 
+//validating the inputs taken in step 1
 function stepOneValidate()
 {
     let emailregex=(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
@@ -100,6 +101,8 @@ function stepOneValidate()
 
 }
 
+
+//checks wether  a plan is selected 
 function planSelected(curr){
     selectedPlan=document.querySelector('input[name="selectPlan"]:checked')
     if(selectedPlan == null){
@@ -112,6 +115,8 @@ function planSelected(curr){
         return true
     }
 }
+
+//checks wether  a addon is selected 
 function addonSelected(curr){
     selectedAddon=document.querySelectorAll('input[name="selectAddon"]:checked')
     if(selectedAddon.length ===0){
@@ -123,6 +128,8 @@ function addonSelected(curr){
         return true
     }
 }
+
+//changes tab either to the next or previos one depending on the index passed
 function tabChange(tabNum){
     stepsArr.forEach(element=>{
         element.classList.remove("active")
@@ -136,6 +143,8 @@ function tabChange(tabNum){
         stepNumsArr[tabNum-1].classList.add("current")
     }
 }
+
+//Changes name and price depending on wether plan is Monthly or Yearly
 function ChangePlanValues(plan){
     if(plan==1){
         yearLabel.style.color="hsl(213, 96%, 18%)"
@@ -243,6 +252,8 @@ planTypebtn.addEventListener('click',()=>{
         return servCon
 
  }
+
+
 nextBtn.addEventListener('click',()=>{
     if(stepOneValidate()===false && tabNum===1){
         tabNum++;
@@ -259,11 +270,15 @@ nextBtn.addEventListener('click',()=>{
     }
     if(tabNum===4){
         totalPrice=0;
+        //changes the text values depending on plan type selected
         selectedPlanText.innerText=selectedPlan.value
         selectedPlanPrice.innerText="$"+selectedPlan.dataset.price+(planTypebtn.value==0 ? "/mo" : "/yr")
         totplan.innerHTML=(planTypebtn.value==0 ? "month)" : "year)")
-        totalPrice+= parseInt(selectedPlan.dataset.price) 
+
+        totalPrice+= parseInt(selectedPlan.dataset.price) //adds the plan price price to total
         selectedAddon=document.querySelectorAll('input[name="selectAddon"]:checked');
+
+        //adds each selected addon to summary and add the total
         selectedAddon.forEach(element => {
             totalPrice+= parseInt(element.value)
             let servCon=createserviceDiv(element.dataset.name,element.value,planTypebtn.value)
