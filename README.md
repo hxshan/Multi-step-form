@@ -87,8 +87,6 @@ There is still more ways i could make my js more efficent and my css more 'DRY' 
 - Frontend Mentor - [@hxshan](https://www.frontendmentor.io/profile/hxshan)
 - LinkedIn - [Galgodage Heshan Gimhana](www.linkedin.com/in/heshan-gimhana)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
 ## Acknowledgments
 
 my friend gautham  for helping me optimise my js code
