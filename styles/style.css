@@ -118,7 +118,7 @@ hr {
 .input-field label {
   font-family: "Ubuntu", serif;
   color: hsl(213, 96%, 18%);
-  font-weight: 500;
+  font-weight: 400;
   font-size: 0.9rem;
 }
 .input-field input[type="text"] {
@@ -133,6 +133,7 @@ hr {
 .input-field input[type="text"]::placeholder {
   font-family: "Ubuntu", serif;
   font-weight: 500;
+  font-size: 1rem;
 }
 input[type="text"]:focus {
   border-color: hsl(243, 100%, 62%);
