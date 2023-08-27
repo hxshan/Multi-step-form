@@ -36,6 +36,11 @@ Users should be able to:
   - A step is submitted, but no selection has been made
 
 ### Screenshot
+![Screen Shot 2023-08-27 at 14 59 18](https://github.com/hxshan/Multi-step-form/assets/85825544/076a354e-fa5d-4414-be02-731e72194ac5)
+![Screen Shot 2023-08-27 at 14 59 12](https://github.com/hxshan/Multi-step-form/assets/85825544/00e623a7-3133-47e7-9672-bbadf08c6115)
+![Screen Shot 2023-08-27 at 14 58 33](https://github.com/hxshan/Multi-step-form/assets/85825544/33c87c90-81ff-4671-9252-69438037a4e9)
+![Screen Shot 2023-08-27 at 14 58 22](https://github.com/hxshan/Multi-step-form/assets/85825544/4e426ad2-e97d-4889-9c1d-a112df4f5e34)
+![Screen Shot 2023-08-27 at 14 54 41](https://github.com/hxshan/Multi-step-form/assets/85825544/8390ed2c-3813-4c47-9eda-f78f2a890638)
 
 ### Links
 
@@ -82,8 +87,6 @@ There is still more ways i could make my js more efficent and my css more 'DRY' 
 ## Author
 - Frontend Mentor - [@hxshan](https://www.frontendmentor.io/profile/hxshan)
 - LinkedIn - [Galgodage Heshan Gimhana](www.linkedin.com/in/heshan-gimhana)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
 ## Acknowledgments
 -[Ayesh Karunaratne](https://aye.sh/blog/sri-lankan-phone-number-regex)
