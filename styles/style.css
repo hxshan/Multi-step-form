@@ -1,465 +1,457 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-body{
-    font-family:'Ubuntu';
-    background-color: hsl(206, 94%, 87%);
+body {
+  font-family: "Ubuntu";
+  background-color: hsl(206, 94%, 87%);
 }
-.background-img{
-    display: flex;
+.background-img {
+  display: flex;
 }
-.background-img img{
-    height: 100%;
-    width: 100%;
+.background-img img {
+  height: 100%;
+  width: 100%;
 }
-form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.top-side-sec{
+.top-side-sec {
   position: relative;
 }
-.steps{
-    position:absolute;
-    display: flex;
-    flex-direction: row;
-    top:20%;
-    left: 50%;
-    transform: translateX(-50%);
+.steps {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
 }
-.step-num{
-    font-family:'Ubuntu',serif;
-    border-radius: 50%;
-    color: white;
-    border: 2px solid white;
-    width: 35px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 .5rem;
-    padding-bottom:.1rem;
-    font-weight: 500;
+.step-num {
+  font-family: "Ubuntu", serif;
+  border-radius: 50%;
+  color: white;
+  border: 2px solid white;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.5rem;
+  padding-bottom: 0.1rem;
+  font-weight: 500;
 }
-.current{
+.current {
   color: black !important;
   border: none;
   background-color: lightblue;
 }
-hr{
+hr {
   border-top: 1px hsl(231, 11%, 63%);
 }
 /*plans selections */
-.Yearlydisc{
+.Yearlydisc {
   display: none;
 }
-.selected{
+.selected {
   display: block;
 }
-.inactive{
+.inactive {
   display: none;
 }
-.step-con{
-    width: 90%;
-    background-color: white;
-    border-radius: 8px;
-    padding: 2rem 0 2rem 0;
-    position: relative;
-    transform: translateY(-70px);
-    margin-bottom: 25vh;
-    box-shadow: none !important;
+.step-con {
+  width: 90%;
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem 0 2rem 0;
+  position: relative;
+  transform: translateY(-70px);
+  margin-bottom: 25vh;
 }
-.step{
+.step {
   display: flex;
   align-items: center;
 }
-.step-text{
+.step-text {
   display: none;
 }
-.form-step{
-    height: 0;
-    width: 0;
-    opacity: 0;
-    display: none;
+.form-step {
+  height: 0;
+  width: 0;
+  opacity: 0;
+  display: none;
 }
-.active{
-    display: block;
-    width: 100%;
-    height: auto;
-    opacity: 1;
+.active {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 1;
 }
-.form-step h1{
-    font-family:'Ubuntu',serif;
-    color: hsl(213, 96%, 18%);
-    margin-bottom: .8rem;
-    font-size: 1.75rem;
-    padding-left: 1.5rem;
+.form-step h1 {
+  font-family: "Ubuntu", serif;
+  color: hsl(213, 96%, 18%);
+  margin-bottom: 0.8rem;
+  font-size: 1.75rem;
+  padding-left: 1.5rem;
 }
-.form-step p{
-    font-family:'Ubuntu',serif;
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: hsl(231, 11%, 63%);
-    padding-left: 1.5rem;
-    padding-right: .25rem;
-    margin-bottom: .5rem;
-  }
-.input-field{
-    margin-top: 1rem;
-    padding-left: 1.5rem;
-    padding-right:.7rem;
+.form-step p {
+  font-family: "Ubuntu", serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: hsl(231, 11%, 63%);
+  padding-left: 1.5rem;
+  padding-right: 0.25rem;
+  margin-bottom: 0.5rem;
 }
-#plan{
-    padding-left: 0;
+.input-field {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 0.7rem;
 }
-.input-field label{
-    font-family:'Ubuntu',serif;
-    color: hsl(213, 96%, 18%);
-    font-weight: 500;
-    font-size: .9rem;
+#plan {
+  padding-left: 0;
 }
-.input-field input[type=text]
-{
-    padding: .6rem 0 .6rem .7rem;
-    width: 95%;
-    margin-top: 5px;
-    font-weight: 700;
-    color: hsl(213, 96%, 18%);
-    border: 1px solid rgba(153, 153, 153, 0.649);
-    border-radius: 7px;
-    
-}
-.input-field input[type=text]::placeholder{
-  font-family:'Ubuntu',serif;
+.input-field label {
+  font-family: "Ubuntu", serif;
+  color: hsl(213, 96%, 18%);
   font-weight: 500;
-
+  font-size: 0.9rem;
 }
-.input-field input[type=text]:focus{
+.input-field input[type="text"] {
+  padding: 0.6rem 0 0.6rem 0.7rem;
+  width: 95%;
+  margin-top: 5px;
+  font-weight: 700;
+  color: hsl(213, 96%, 18%);
+  border: 1px solid rgba(153, 153, 153, 0.649);
+  border-radius: 7px;
+}
+.input-field input[type="text"]::placeholder {
+  font-family: "Ubuntu", serif;
+  font-weight: 500;
+}
+.input-field input[type="text"]:focus {
   border-color: hsl(243, 100%, 62%);
 }
-.hiddenerror{
+.hiddenerror {
   display: none;
 }
-.inputError{
+.inputError {
   display: block;
   border-color: red;
   color: red;
 }
-.form-btn-con{
-    background-color: white;
-    position:fixed;
-    width: 100%;
-    bottom: 0;
-    height: 3.5rem;
-    display: flex;
-
+.form-btn-con {
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 3.5rem;
+  display: flex;
 }
-.next-btn{  
-    font-family:'Ubuntu',serif;
-    padding: .7rem 0.8rem .7rem .8rem;
-    border: none;
-    border-radius:5px;
-    background-color: hsl(213, 96%, 18%);
-    color: white;
-    position: fixed;
-    right: 1rem;
-    bottom: .5rem;
-    letter-spacing:2px;
+.next-btn {
+  font-family: "Ubuntu", serif;
+  padding: 0.7rem 0.8rem 0.7rem 0.8rem;
+  border: none;
+  border-radius: 5px;
+  background-color: hsl(213, 96%, 18%);
+  color: white;
+  position: fixed;
+  right: 1rem;
+  bottom: 0.5rem;
+  letter-spacing: 2px;
 }
-.next-btn:hover{
+.next-btn:hover {
   cursor: pointer;
   background-color: hsl(213, 100%, 30%);
 }
-.back-btn{
+.back-btn {
   display: none;
-  font-family:'Ubuntu',serif;
-  padding: .7rem 0.8rem .7rem .8rem;
-  background-color:transparent;
+  font-family: "Ubuntu", serif;
+  padding: 0.7rem 0.8rem 0.7rem 0.8rem;
+  background-color: transparent;
   color: grey;
   text-decoration: none;
   border: none;
   position: fixed;
   left: 1rem;
-  bottom: .5rem;
+  bottom: 0.5rem;
 }
-.back-btn:hover{
+.back-btn:hover {
   cursor: pointer;
 }
-#submit-btn{
+#submit-btn {
   background-color: hsl(243, 100%, 62%);
- 
 }
-#submit-btn:hover{
+#submit-btn:hover {
   cursor: pointer;
 }
 .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(213, 96%, 18%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: hsl(213, 96%, 18%);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+#step2 {
+  width: 100%;
+}
+.planType {
+  display: flex;
+  justify-content: center;
+  background-color: hsl(217, 100%, 97%);
+  padding-right: 0;
+  width: 85%;
+  margin-left: 7.5%;
+  font-weight: 500;
+  border-radius: 8px;
+}
+.subType {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+.subType h4 {
+  margin: 0 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: hsl(231, 11%, 63%);
+}
+.input-field input[type="radio"] {
+  position: absolute;
+  height: 50px;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-con {
+  /*border: 2px solid rgba(128, 128, 128, 0.603);*/
+  display: flex;
+  justify-content: center;
+  width: 85%;
+  margin: auto;
+  margin-top: 0.7rem;
+  border-radius: 12px;
+  padding: 0;
+}
+.radio-label {
+  display: flex;
+  align-items: center;
+  border: 2px solid rgba(128, 128, 128, 0.603);
+  width: 20rem;
+  padding: 1rem;
+  margin: auto;
+  border-radius: 12px;
+}
+.radio-label img {
+  width: 3.3rem;
+}
+.radio-label > .side {
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  margin-left: 1rem;
+}
+.radio-label > .side > p {
+  padding: 0;
+}
+.radio-label > .side > h3 {
+  font-size: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+input[type="radio"]:checked + label {
+  border: 2px solid hsl(243, 100%, 62%);
+}
+.checkbox {
+  padding: 0;
+  width: auto;
+  margin-top: 0;
+  accent-color: hsl(243, 100%, 62%);
+}
+
+.checkbox-con {
+  /*border: 2px solid rgba(128, 128, 128, 0.603);*/
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: auto;
+  margin-top: 0.7rem;
+  border-radius: 12px;
+  padding: 0;
+}
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid rgba(128, 128, 128, 0.603);
+  width: 20rem;
+  height: 90px;
+  padding: 1rem;
+  margin: auto;
+  border-radius: 12px;
+}
+.checkbox-label input {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+}
+.checkbox-title {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 180px;
+  margin: 0 0 0 15px;
+}
+.checkbox-title p {
+  padding-left: 0;
+}
+.checkbox-label h3 {
+  font-size: 0.95rem;
+}
+.checkbox-label p {
+  font-size: 0.85rem;
+}
+.checkbox-label:has(.checkbox:checked) {
+  border-color: hsl(243, 100%, 62%);
+}
+.right-side p {
+  padding-left: 0;
+  font-size: 0.9rem;
+}
+.plan-con {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.7rem;
+}
+.plan h5 {
+  font-weight: 500;
+  color: hsl(213, 96%, 18%);
+  font-size: 1rem;
+}
+.plan button {
+  font-size: 1rem;
+  color: hsl(231, 11%, 63%);
+}
+.price {
+  align-self: flex-end;
+  color: hsl(213, 96%, 18%);
+  font-weight: 700;
+}
+.selected-items-con {
+  width: 85%;
+  background-color: hsl(217, 100%, 97%);
+  margin: auto auto 1rem auto;
+  border-radius: 8px;
+  padding: 1rem 0.8rem 1rem 0.8rem;
+}
+.changePlan {
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+  font-weight: 400;
+}
+.serv {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+.serv-con p {
+  padding: 0;
+}
+.tot {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 1.5rem;
+}
+#total {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: hsl(243, 100%, 62%);
+}
+#step5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+#step5 h1 {
+  margin: 1rem 0;
+}
+#step5 p {
+  padding: 0rem 1rem;
+  line-height: 1.5rem;
+}
+
+/*============================================Larger Screens=============================*/
+
+
+@media screen and (min-width: 768px) {
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .top-side-sec {
     position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-  }
-  
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: hsl(213, 96%, 18%);
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color:hsl(213, 96%, 18%);
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
-  
-
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
-  #step2{
-    width: 100%;
-  }
-.planType{
-    display: flex;
-    justify-content: center;
-    background-color:hsl(217, 100%, 97%);
-    padding-right: 0;
-    width: 85%;
-    margin-left: 7.5%;
-    font-weight: 500;
-    border-radius: 8px;
-  }
-  .subType{
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-  }
-  .subType h4{
-    margin: 0 1rem;
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: hsl(231, 11%, 63%);
-  }
-  .input-field input[type=radio]{
-    position: absolute;
-    height: 50px;
-    width: 100%;
-    opacity: 0;
-    cursor: pointer;
-  }
-
-  .radio-con{
-    /*border: 2px solid rgba(128, 128, 128, 0.603);*/
-    display: flex;
-    justify-content:  center;
-    width:85%;
-    margin: auto;
-    margin-top: .7rem;
-    border-radius: 12px;
-    padding: 0;
-  }
-  .radio-label{
-    display: flex;
-    align-items: center;
-    border: 2px solid rgba(128, 128, 128, 0.603);
-    width:20rem;
-    padding:1rem;
-    margin: auto;
-    border-radius: 12px;
-  }
-  .radio-label img{
-    width:3.3rem;
-  }
-  .radio-label>.side  {
-    display: flex;
-    flex-direction: column;
-    align-items: self-start;
-    margin-left: 1rem;
-  }
-  .radio-label>.side>p{
-    padding: 0;
-
-  }
-  .radio-label>.side>h3{
-    font-size: 1rem;
-    margin-bottom: .35rem;
-  }
-  
-  input[type="radio"]:checked + label{
-    border: 2px solid hsl(243, 100%, 62%);
-  }
-  .checkbox{
-    padding: 0;
-    width: auto;
-    margin-top: 0;
-    accent-color: hsl(243, 100%, 62%);
-  }
-
-  .checkbox-con{
-    /*border: 2px solid rgba(128, 128, 128, 0.603);*/
-    display: flex;
-    justify-content:  center;
-    width:90%;
-    margin: auto;
-    margin-top: .7rem;
-    border-radius: 12px;
-    padding: 0;
-  }
-  .checkbox-label{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 2px solid rgba(128, 128, 128, 0.603);
-    width:20rem;
-    height: 90px;
-    padding:1rem;
-    margin: auto;
-    border-radius: 12px;
-  }
-  .checkbox-label input{
-    width:20px;
-    height: 20px;
-    border-radius: 5px;
-  }
-  .checkbox-title{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    width:180px;
-    margin: 0 0 0 15px;
-  }
-  .checkbox-title p{
-    padding-left: 0;
-  }
-  .checkbox-label h3 {
-    font-size: 0.95rem;
-  }
-  .checkbox-label p {
-    font-size: .85rem;
-  }
-  .checkbox-label:has(.checkbox:checked){
-    border-color: hsl(243, 100%, 62%);
-  }
-  .right-side p{
-    padding-left: 0;
-    font-size: .9rem;
-  }
-  .plan-con{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: .7rem;
-  }
-  .plan h5{
-    font-weight: 500;
-    color:hsl(213, 96%, 18%);
-    font-size: 1rem;
-  }
-  .plan button{
-    font-size: 1rem;
-    color: hsl(231, 11%, 63%) ;
-  }
-  .price{
-    align-self: flex-end;
-    color: hsl(213, 96%, 18%);
-    font-weight:700 ;
-
-  }
-  .selected-items-con{
-   
-    width: 85%;
-    background-color: hsl(217, 100%, 97%);
-    margin: auto auto 1rem auto;
-    border-radius: 8px;
-    padding: 1rem 0.8rem 1rem .8rem;
-  }
-  .changePlan{
-    border:none;
-    background-color: transparent;
-    text-decoration: underline;
-    font-weight: 400;
-    
-  }
-  .serv{
-    display: flex;
-    justify-content: space-between;
-    margin: 1rem 0;
-  }
-  .serv-con p{
-  padding: 0;    
-  }
-  .tot{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-right: 1.5rem;
-  }
-  #total{
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: hsl(243, 100%, 62%);
-  }
-  #step5{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  #step5 h1{
-    margin: 1rem 0;
-  }
-  #step5 p{
-   padding: 0rem 1rem;
-   line-height: 1.5rem;
-  }
-
-  @media screen and (min-width:768px){
-    form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-    }
-  .top-side-sec{
-    position: relative;
-    z-index:2;
+    z-index: 2;
     max-width: 35vw;
   }
   .steps {
@@ -471,165 +463,167 @@ hr{
     transform: translateX(0);
     margin-left: 2rem;
   }
-  .step-num{
-      font-family:'Ubuntu',serif;
-      border-radius: 50%;
-      color: white;
-      border: 1px solid white;   
-      margin: 1rem 0;
-      width: 40px;
-      height: 40px;
-      padding-bottom:.1rem;
-      font-weight: 500;
+  .step-num {
+    font-family: "Ubuntu", serif;
+    border-radius: 50%;
+    color: white;
+    border: 1px solid white;
+    margin: 1rem 0;
+    width: 40px;
+    height: 40px;
+    padding-bottom: 0.1rem;
+    font-weight: 500;
   }
-  .step-text{
+  .step-text {
     display: block;
     margin-left: 1rem;
   }
-  .step-text p#stepNum{
-    color:  hsl(229, 24%, 87%);
-    font-size:.9rem;
+  .step-text p#stepNum {
+    color: hsl(229, 24%, 87%);
+    font-size: 0.9rem;
   }
-  .step-text p#step-name{
-    color:  white;
-    font-weight: 700
+  .step-text p#step-name {
+    color: white;
+    font-weight: 700;
   }
-  .background-img{
-    content:url('../assets/images/bg-sidebar-desktop.svg');
+  .background-img {
+    content: url("../assets/images/bg-sidebar-desktop.svg");
     display: flex;
     height: 100%;
     padding: 1rem 0 1rem 1rem;
-
-}
-.background-img img{
+  }
+  .background-img img {
     height: 100%;
     width: 100%;
-}
-.step-con {
-  width: 100%;
-  padding: 2rem 0 2rem 0;
-  position: relative;
-  transform: translateY(0);
-  margin-bottom: 0;
-  margin-left: 0;
-  height: 80%;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-.form-con{
-  margin-top: 5rem;
-  display: flex;
-  background-color: white;
-  border-radius: 8px;
-  height: 38rem;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-.form-btn-con {
-  background-color: white;
-  position: relative;
-  margin-bottom: 1.8rem;
-  width: 100%;
-  bottom: 0;
-  height: 3.5rem;
-  display:flex;
-  justify-content: end;
-  
-}
-.next-btn {
-  font-family: 'Ubuntu',serif;
-  font-weight: 500;
-  font-size:.85rem;
-  padding:0 1.5rem;
-  position: relative;
-  right: 0;
-  bottom: 0;
-  letter-spacing: 1px;
-  word-spacing: 3px;
-  border-radius: 8px;
-}
-.back-btn {
-  font-family: 'Ubuntu',serif;
-  position: relative;
-  margin-right: 55%;
-  font-size: 1rem;
-}
-.input-field {
-  margin-top: 1.6rem;
-  padding-left: 0rem;
-  padding-right: 0;
-}
-.input-field input[type="text"] {
-  border: 1px solid rgba(128, 128, 128, 0.649);
-  border-radius: 5px;
-  padding: 1rem 0 1rem .7rem;
-  width: 100%;
-  margin-top: 10px;
-
-}
-.input-field label {
-  font-size: 1rem;
-}
-.plan-in-con{
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.radio-label{
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  align-items: start;
-  text-align: start;
-  margin:0;
-}
-
-.radio-label img {
-  width: 2.5rem;
-  margin-bottom: 2.5rem;
-}
-.form-step h1{
-  padding-left: 0rem;
-  font-size: 2rem;
-}
-.form-step{
-  width: 490px;
-  margin-top: 2rem;
-}
-.form-step p{
-  padding-left: 0rem;
-}
-.planType{
-  width: 100%;
-  margin-left: 0;
-}
-.checkbox-label {
-  width: 100%;
-}
-.checkbox-con{
-  width: 100%;
-}
-.input-field + .checkbox-con{
-  margin-top: 1rem;
-}
-#submit-btn{
-  padding: 0 2rem;
-  font-size: 1rem;
-}
-.selected-items-con {
-  width: 100%;
-  margin: 1.5rem auto 2rem auto;  
-}
-main{
-  display: flex;
-  flex-direction: row;
-  width: 100vw;
-  align-items: center;
-  justify-content: center;
-}
-#month-lab{
-  color:hsl(213, 96%, 18%) ;
-}
-form{
-  margin:0 5rem 0 5rem;
-}
   }
+  .step-con {
+    width: 100%;
+    padding: 2rem 0 2rem 0;
+    position: relative;
+    transform: translateY(0);
+    margin-bottom: 0;
+    margin-left: 0;
+    height: 80%;
+    box-shadow:none;
+  }
+  .form-con {
+    margin-top: 5rem;
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    height: 38rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  .form-btn-con {
+    background-color: white;
+    position: relative;
+    margin-bottom: 1.8rem;
+    width: 100%;
+    bottom: 0;
+    height: 3.5rem;
+    display: flex;
+    justify-content: end;
+  }
+  .next-btn {
+    font-family: "Ubuntu", serif;
+    font-weight: 500;
+    font-size: 0.85rem;
+    padding: 0 1.5rem;
+    position: relative;
+    right: 0;
+    bottom: 0;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    border-radius: 8px;
+  }
+  .back-btn {
+    font-family: "Ubuntu", serif;
+    position: relative;
+    margin-right: 55%;
+    font-size: 1rem;
+  }
+  .input-field {
+    margin-top: 1.6rem;
+    padding-left: 0rem;
+    padding-right: 0;
+  }
+  .input-field input[type="text"] {
+    border: 1px solid rgba(128, 128, 128, 0.649);
+    border-radius: 5px;
+    padding: 1rem 0 1rem 0.7rem;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .input-field label {
+    font-size: 1rem;
+  }
+  .plan-in-con {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .radio-label {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-items: start;
+    text-align: start;
+    margin: 0;
+    padding: 1rem 0 1rem 1rem;
+  }
+
+  .radio-label > .side {
+  
+    margin-left: 0rem;
+  }
+  .radio-label img {
+    width: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .form-step h1 {
+    padding-left: 0rem;
+    font-size: 2rem;
+  }
+  .form-step {
+    width: 490px;
+    margin-top: 2rem;
+  }
+  .form-step p {
+    padding-left: 0rem;
+  }
+  .planType {
+    width: 100%;
+    margin-left: 0;
+  }
+  .checkbox-label {
+    width: 100%;
+  }
+  .checkbox-con {
+    width: 100%;
+  }
+  .input-field + .checkbox-con {
+    margin-top: 1rem;
+  }
+  #submit-btn {
+    padding: 0 2rem;
+    font-size: 1rem;
+  }
+  .selected-items-con {
+    width: 100%;
+    margin: 1.5rem auto 2rem auto;
+  }
+  main {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+  }
+  #month-lab {
+    color: hsl(213, 96%, 18%);
+  }
+  form {
+    margin: 0 5rem 0 5rem;
+  }
+}
