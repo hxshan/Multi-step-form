@@ -1,4 +1,3 @@
-
 //round numbers indicating current tab 
 const stepsArr = document.querySelectorAll(".form-step");
 const stepNumsArr = document.querySelectorAll(".step-num");
@@ -262,7 +261,7 @@ nextBtn.addEventListener('click',()=>{
         totalPrice=0;
         selectedPlanText.innerText=selectedPlan.value
         selectedPlanPrice.innerText="$"+selectedPlan.dataset.price+(planTypebtn.value==0 ? "/mo" : "/yr")
-        totplan.innerHTML=(planTypebtn.value==0 ? "month" : "year")
+        totplan.innerHTML=(planTypebtn.value==0 ? "month)" : "year)")
         totalPrice+= parseInt(selectedPlan.dataset.price) 
         selectedAddon=document.querySelectorAll('input[name="selectAddon"]:checked');
         selectedAddon.forEach(element => {

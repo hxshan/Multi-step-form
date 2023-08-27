@@ -46,7 +46,7 @@ form{
     font-weight: 500;
 }
 .current{
-  color: black;
+  color: black !important;
   border: none;
   background-color: lightblue;
 }
@@ -71,6 +71,14 @@ hr{
     position: relative;
     transform: translateY(-70px);
     margin-bottom: 25vh;
+    box-shadow: none !important;
+}
+.step{
+  display: flex;
+  align-items: center;
+}
+.step-text{
+  display: none;
 }
 .form-step{
     height: 0;
@@ -177,6 +185,16 @@ hr{
   position: fixed;
   left: 1rem;
   bottom: .5rem;
+}
+.back-btn:hover{
+  cursor: pointer;
+}
+#submit-btn{
+  background-color: hsl(243, 100%, 62%);
+ 
+}
+#submit-btn:hover{
+  cursor: pointer;
 }
 .switch {
     position: relative;
@@ -357,9 +375,12 @@ hr{
   .checkbox-label p {
     font-size: .85rem;
   }
-
+  .checkbox-label:has(.checkbox:checked){
+    border-color: hsl(243, 100%, 62%);
+  }
   .right-side p{
     padding-left: 0;
+    font-size: .9rem;
   }
   .plan-con{
     display: flex;
@@ -367,8 +388,9 @@ hr{
     margin-bottom: .7rem;
   }
   .plan h5{
-    font-weight: 700;
+    font-weight: 500;
     color:hsl(213, 96%, 18%);
+    font-size: 1rem;
   }
   .plan button{
     font-size: 1rem;
@@ -445,6 +467,7 @@ hr{
     display: flex;
     flex-direction: column;
     left: 0;
+    top: 3rem;
     transform: translateX(0);
     margin-left: 2rem;
   }
@@ -452,10 +475,24 @@ hr{
       font-family:'Ubuntu',serif;
       border-radius: 50%;
       color: white;
-      border: 2px solid white;
-      margin: 2rem 0;
+      border: 1px solid white;   
+      margin: 1rem 0;
+      width: 40px;
+      height: 40px;
       padding-bottom:.1rem;
       font-weight: 500;
+  }
+  .step-text{
+    display: block;
+    margin-left: 1rem;
+  }
+  .step-text p#stepNum{
+    color:  hsl(229, 24%, 87%);
+    font-size:.9rem;
+  }
+  .step-text p#step-name{
+    color:  white;
+    font-weight: 700
   }
   .background-img{
     content:url('../assets/images/bg-sidebar-desktop.svg');
@@ -476,6 +513,7 @@ hr{
   margin-bottom: 0;
   margin-left: 0;
   height: 80%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .form-con{
   margin-top: 5rem;
@@ -483,6 +521,7 @@ hr{
   background-color: white;
   border-radius: 8px;
   height: 38rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .form-btn-con {
   background-color: white;
@@ -497,17 +536,21 @@ hr{
 }
 .next-btn {
   font-family: 'Ubuntu',serif;
-  font-weight: 700;
-  padding: .7rem 1.5rem .7rem 1.5rem;
+  font-weight: 500;
+  font-size:.85rem;
+  padding:0 1.5rem;
   position: relative;
   right: 0;
   bottom: 0;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  border-radius: 8px;
 }
 .back-btn {
- 
   font-family: 'Ubuntu',serif;
   position: relative;
   margin-right: 55%;
+  font-size: 1rem;
 }
 .input-field {
   margin-top: 1.6rem;
@@ -550,6 +593,7 @@ hr{
 }
 .form-step{
   width: 490px;
+  margin-top: 2rem;
 }
 .form-step p{
   padding-left: 0rem;
@@ -557,6 +601,23 @@ hr{
 .planType{
   width: 100%;
   margin-left: 0;
+}
+.checkbox-label {
+  width: 100%;
+}
+.checkbox-con{
+  width: 100%;
+}
+.input-field + .checkbox-con{
+  margin-top: 1rem;
+}
+#submit-btn{
+  padding: 0 2rem;
+  font-size: 1rem;
+}
+.selected-items-con {
+  width: 100%;
+  margin: 1.5rem auto 2rem auto;  
 }
 main{
   display: flex;
