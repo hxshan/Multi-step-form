@@ -26,7 +26,7 @@ var selectedPlan=document.querySelector('input[name="selectPlan"]:checked');
 
 //thirdtab
 var Addons=document.querySelectorAll('input[name="selectAddon"]');
-var AddonPrices=document.getElementsByName('addonPrice');
+var AddonPrices=document.getElementsByClassName('addonPrice');
 var selectedAddon=document.querySelectorAll('input[name="selectAddon"]:checked');
 //fourt tab
 const changePlanBtn=document.getElementById("changePlan")
