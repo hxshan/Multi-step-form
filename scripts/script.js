@@ -41,8 +41,9 @@ var totalPrice=0;
 function stepOneValidate()
 {
     let emailregex=(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
-    let nameregex=(/^[A-Za-z]+$/) ;
-    let phoneregex=(/^[0-9]{10}$/)
+    let nameregex=(/^[A-Za-z\s]*$/) ;
+    //for sri lankan phone numbers
+    let phoneregex=(/^(?:0|94|\+94)?(?:(11|21|23|24|25|26|27|31|32|33|34|35|36|37|38|41|45|47|51|52|54|55|57|63|65|66|67|81|912)(0|2|3|4|5|7|9)|7(0|1|2|4|5|6|7|8)\d)\d{6}$/)
     let status=false;
 
     let Errlist=document.querySelectorAll(".hiddenerror");

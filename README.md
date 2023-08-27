@@ -13,6 +13,7 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
+
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
@@ -85,6 +86,7 @@ There is still more ways i could make my js more efficent and my css more 'DRY' 
 **Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
 ## Acknowledgments
-
-my friend gautham  for helping me optimise my js code
+-[Ayesh Karunaratne](https://aye.sh/blog/sri-lankan-phone-number-regex)
+for the regular expression used to validate phone numbers
+-my friend gautham  for helping me optimise my js code
 -[LinkedIn]((https://www.linkedin.com/in/gautham-kulasingham-223bb2257/))
