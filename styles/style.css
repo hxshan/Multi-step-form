@@ -310,11 +310,14 @@ input:checked + .slider:before {
   align-items: self-start;
   margin-left: 1rem;
 }
-.radio-label > .side > p {
+.radio-label > .side > span.planPrice {
   padding: 0;
-}
-.radio-label > .side > h3 {
+  color: hsl(231, 11%, 63%);
   font-size: 1rem;
+}
+.radio-label > .side > span.plan-name {
+  font-size: 1rem;
+  font-weight: 700;
   margin-bottom: 0.35rem;
 }
 
@@ -364,13 +367,25 @@ input[type="radio"]:checked + label {
   flex-direction: column;
   align-items: start;
   width: 180px;
-  margin: 0 0 0 15px;
+  margin: 0 0 0 20px;
 }
-.checkbox-title p {
+.addonPrice{
+  color: hsl(231, 11%, 63%);
+}
+.checkbox-title-head{
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.checkbox-title-desc{
+  color: hsl(231, 11%, 63%);
+}
+.checkbox-title span.checkbox-title-desc {
   padding-left: 0;
 }
-.checkbox-label h3 {
+.checkbox-label span.heading {
   font-size: 0.95rem;
+  font-weight: 700;
+  display: inline;
 }
 .checkbox-label p {
   font-size: 0.85rem;
@@ -613,6 +628,14 @@ input[type="radio"]:checked + label {
   }
   .checkbox-label {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:normal;
+  }
+  .checkbox-title{
+    margin-left: 2rem;
+    width: 230px;
+    margin-right: 6rem;
   }
   .checkbox-con {
     width: 100%;
